@@ -26,10 +26,10 @@ footer {
   text-align: center;
   opacity: 50%;
 }
-.app {
+#app {
   margin: 0 auto;
   background-color: orangered;
 }
-.app:hover {
+#app:hover {
   border: 1px dashed;
 }
