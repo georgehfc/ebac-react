@@ -13,6 +13,9 @@ h1:hover {
 p {
   font-style: italic;
 }
+li {
+  line-height: 24px;
+}
 span {
   text-decoration: underline wavy black;
 }
