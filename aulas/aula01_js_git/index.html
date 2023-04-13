@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="./images/favicon.ico">
   <title>From Zero to Pro</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,7 @@
       <h1>We will dive into <span>React</span> soon...</h1>
     </header>
     <section>
-      <h4>Fancy some Tags HTML?</h4>
+      <a href="#" id="focus"><h4>Fancy some Tags HTML? 🔑</h4></a>
       <article>
         <p>Examples:</p>
         <ul>
@@ -31,9 +32,24 @@
           <li><span id="hello-kraken">Release the Hello-Kraken!</span></li>
         </ul>
       </article>
+      <article>
+        <select>
+          <option>Pick one option</option>
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>Javascript</option>
+          <option>Typescript</option>
+          <option>React</option>
+          <option value="hello">Change me!</option>
+        </select>
+        <br><br>
+        <input type="button" onclick="getFocus()" value="Get focus 🔎" class="change">
+        <input type="button" onclick="loseFocus()" value="Lose focus 🔍" class="change">
+        <input type="button" id="grito" value="Grite olá 💥">
+      </article>
     </section>
     <footer>
-      <p>Designed with ☀ by <strong>EBAC</strong></p>
+      <p>Designed with ☂︎ by <strong>EBAC</strong></p>
     </footer>
   </div>
 </body>

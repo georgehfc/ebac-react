@@ -9,15 +9,23 @@ h1 {
 }
 h1:hover {
   color: white;
+  cursor: wait;
 }
 p {
   font-style: italic;
+}
+a:focus, a:active, a:visited {
+  color: beige;
+  text-decoration: none;
 }
 li {
   line-height: 24px;
 }
 span {
   text-decoration: underline wavy black;
+}
+section {
+  padding: 16px;
 }
 article {
   margin-top: 16px;
@@ -29,10 +37,19 @@ footer {
   text-align: center;
   opacity: 50%;
 }
+input, select {
+  padding: 8px;
+  border: 1px dashed #c71f1f;
+  transition: 0.2s;
+}
+input:hover {
+  cursor: pointer;
+}
 #app {
   margin: 0 auto;
   background-color: orangered;
 }
-#app:hover {
-  border: 1px dashed;
+#helloDiv {
+  padding: 8px;
+  text-align: center;
 }
