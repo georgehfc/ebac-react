@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 48px;
+  padding: 24px;
+  margin: 16px;
+  letter-spacing: 4px;
+  background-color: orangered;
+  color: white;
+}
+#button {
+  width: 240px;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 16px;
+  margin: 16px;
+  cursor: pointer;
+  border: 2px solid orange;
+  color: white;
+  background-color: orangered;
+}
+#pai {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  margin: 8px 0;
+  text-align: center;
+  height: 120px;
+  background-color: blue;
+}
+#filho {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  margin: 8px 0;
+  text-align: center;
+  height: 120px;
+  background-color: blueviolet;
+}
+#espirito-santo {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  margin: 8px 0;
+  text-align: center;
+  height: 120px;
+  background-color: yellowgreen;
+}
