@@ -2,7 +2,7 @@
   margin: 0;
 }
 body {
-  height: 1000px;
+  height: 100%;
 }
 h1 {
   text-align: center;
@@ -10,7 +10,7 @@ h1 {
   padding: 24px;
   margin: 16px;
   letter-spacing: 4px;
-  background-color: orangered;
+  background-color: #F4F4F4;
   color: white;
 }
 form {
@@ -36,42 +36,6 @@ button {
   border: 2px solid orange;
   color: white;
   background-color: orangered;
-}
-#pai {
-  font-size: 40px;
-  cursor: pointer;
-  padding: 8px;
-  margin: 8px 0;
-  text-align: center;
-  height: 120px;
-  background-color: blue;
-  color: white;
-}
-#filho {
-  font-size: 40px;
-  cursor: pointer;
-  padding: 8px;
-  margin: 8px 0;
-  text-align: center;
-  height: 120px;
-  background-color: blueviolet;
-  color: rgb(241, 157, 0);
-}
-#espirito-santo {
-  font-size: 40px;
-  cursor: pointer;
-  padding: 8px;
-  margin: 8px 0;
-  text-align: center;
-  height: 140px;
-  background-color: yellowgreen;
-  color: black;
-}
-.container {
-  margin: 32px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #checkbox {
   height: 25px;
