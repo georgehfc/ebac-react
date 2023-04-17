@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="./images/favicon-32x32.png">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./css/css.css">
+  <link rel="icon" href="./images/favicon-32x32.png">
 </head>
 <body>
   <h1>Welcome to <em>Calculator</em></h1>
+  <div class="textfield">
+    <!-- Initialize input with focus -->
+    <input type="text" id="calc" placeholder="Calculate everything" autofocus>
+  </div>
+  <!-- Display numeric btns (0-9) -->
+  <!-- Add operation btns (+, -, *, /) -->
+  <!-- Add comma (,) -->
+  <!-- Add result (=) -->
+  <div class="container">
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item">÷</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">×</div>
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">–</div>
+    <div class="grid-item">,</div>
+    <div class="grid-item">0</div>
+    <div class="grid-item result">=</div>
+    <div class="grid-item">+</div>
+  </div>
+  <!-- TODO: Textfields must respond to btn clicks AND typing -->
+  <!-- TODO: Responsiveness (Desktop/Mobile) -->
   <!-- SCRIPTS -->
-  <script src="./js/app.js"></script>
+  <script>
+    console.log("Lights On!");
+  </script>
+  <script src="./js/app.js">
+  </script>
 </body>
 </html>

@@ -1,29 +1,31 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100%;
 }
 h1 {
-  text-align: center;
-  font-size: 48px;
-  padding: 24px;
-  margin: 16px;
-  letter-spacing: 4px;
-  background-color: #F4F4F4;
+  width: 100vw;
+  font-size: 24px;
+  margin: 0 auto;
+  padding: 16px;
+  letter-spacing: 1px;
+  background-color: black;
   color: white;
 }
 form {
   padding: 16px;
 }
 input {
-  width: 200px;
+  height: 56px;
+  width: 100vw;
   font-size: 24px;
   text-align: center;
   letter-spacing: 1px;
-  padding: 16px;
   cursor: pointer;
-  border: 2px solid grey;
+  border: 1px solid grey;
 }
 button {
   width: 240px;
@@ -37,14 +39,36 @@ button {
   color: white;
   background-color: orangered;
 }
-#checkbox {
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #dedede;
+  padding: 10px;
 }
-#checkbox:hover {
-  background-color: #ccc;
+.textfield {
+  text-align: center;
 }
-#checkbox:checked {
-  background-color: #2196F3;
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(209, 209, 209, 0.8);
+  padding: 16px;
+  font-size: 24px;
+  text-align: center;
+}
+.grid-item.result {
+  background-color: greenyellow;
+}
+/* BREAKPOINTS */
+@media only screen and (max-width: 232px) {
+  #calc {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 12px;
+  }
+  body {
+    background-color: gainsboro;
+  }
 }
