@@ -54,6 +54,10 @@ button {
   padding: 16px;
   font-size: 24px;
   text-align: center;
+  cursor: pointer;
+}
+.grid-item:hover {
+  background-color: orangered;
 }
 .grid-item.result {
   background-color: greenyellow;
