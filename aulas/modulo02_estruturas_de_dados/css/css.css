@@ -42,7 +42,7 @@ button {
 .container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: #dedede;
+  background-color: #f2f1f1;
   padding: 10px;
 }
 .textfield {
@@ -62,6 +62,10 @@ button {
 .grid-item.result {
   background-color: greenyellow;
 }
+.grid-item.operation {
+  background-color: blueviolet;
+  color: white;
+}
 /* BREAKPOINTS */
 @media only screen and (max-width: 232px) {
   #calc {
@@ -74,5 +78,11 @@ button {
   }
   body {
     background-color: gainsboro;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
   }
 }
