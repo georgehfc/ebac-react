@@ -5,10 +5,11 @@
 }
 
 body {
-  /* height: 100%; */
   padding-top: 5%;
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
   text-align: center;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
@@ -18,8 +19,9 @@ h1 {
   margin: 0 auto;
   padding: 16px;
   letter-spacing: 1px;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, .2);
   color: white;
+  border-radius: 16px 16px 0 0;
 }
 
 form {
@@ -34,19 +36,6 @@ input {
   letter-spacing: 1px;
   cursor: pointer;
   border: 1px solid grey;
-}
-
-button {
-  width: 240px;
-  font-size: 24px;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 16px;
-  margin: 16px;
-  cursor: pointer;
-  border: 2px solid orange;
-  color: white;
-  background-color: orangered;
 }
 
 .container {
@@ -100,6 +89,7 @@ button {
 
 @media only screen and (max-width: 978px) {
   body {
+    padding-top: 0;
     background-color: gainsboro;
   }
 

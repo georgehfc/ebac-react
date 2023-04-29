@@ -17,25 +17,22 @@ window.onload = function()
   function displayOperands(e) {
     console.log(calc.value);
     if (calc.value) {
-      h1[0].innerHTML='';
-      h1[0].innerHTML+=calc.placeholder+e.currentTarget.innerHTML;
+      h1[0].innerHTML = '';
+      h1[0].innerHTML += calc.placeholder + e.currentTarget.innerHTML;
     } else {
-      calc.placeholder='Invalid expression...';
-      h1[0].innerHTML='Welcome to <em>Calculator</em>';
+      calc.placeholder = 'Invalid expression...';
+      h1[0].innerHTML = 'Welcome to <em>Calculator</em>';
     }
-  }
-
-  function isNumeric(value) {
-    return /^-?\d+$/.test(value);
   }
 
   function calculateResult(e) {
     if (h1[0].innerHTML==='Welcome to <em>Calculator</em>') {
-      calc.placeholder='Invalid expression...';
+      calc.value = '';
+      calc.placeholder = 'Invalid expression...';
     } else {
-      calc.value=compute(h1[0].innerHTML, calc.value);
-      h1[0].innerHTML='Welcome to <em>Calculator</em>';
-      calc.placeholder='Calculate everything';
+      calc.value = compute(h1[0].innerHTML, ccalc.value.replace(',', '.'));
+      h1[0].innerHTML = 'Welcome to <em>Calculator</em>';
+      calc.placeholder = 'Calculate everything';
     }
   }
 
@@ -56,25 +53,22 @@ window.onload = function()
     }
   }
 
-  function resetCalc() {
-    document.reload();
-  }
-
   comma.addEventListener('click', () => calc.value+=',');
 
   equals.addEventListener('click', (e) => (calculateResult(e)));
+
   document.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
-      if (/\(\d+\)|\d+[-+/*]\d+/.test(calc.value)) {
-        e.preventDefault();
-
-        result = eval((calc.value).replace(',','.'));
-        calc.value = result;
-
-        document.getElementById("calc").click();
-      } else {
-        calc.value = '';
-      }
+      calc.value = compute(h1[0].innerHTML, calc.value.replace(',', '.'));
+      h1[0].innerHTML = 'Welcome to <em>Calculator</em>';
+      calc.placeholder = 'Calculate everything';
+      document.getElementById("calc").click();
     }
   });
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      window.location.reload();
+    }
+  })
 }
