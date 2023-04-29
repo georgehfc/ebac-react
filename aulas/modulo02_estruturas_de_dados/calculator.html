@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="./images/favicon-32x32.png">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./css/css.css">
+  <link rel="icon" href="./images/favicon-32x32.png">
 </head>
 <body>
   <h1>Welcome to <em>Calculator</em></h1>
+  <input type="text" id="calc" placeholder="Calculate everything" name="calc" autofocus>
+  <div class="container">
+    <div class="grid-item number" value="7">7</div>
+    <div class="grid-item number" value="8">8</div>
+    <div class="grid-item number" value="9">9</div>
+    <div class="grid-item operation" id="divide">÷</div>
+    <div class="grid-item number" value="4">4</div>
+    <div class="grid-item number" value="5">5</div>
+    <div class="grid-item number" value="6">6</div>
+    <div class="grid-item operation" id="multiply">×</div>
+    <div class="grid-item number" value="1">1</div>
+    <div class="grid-item number" value="2">2</div>
+    <div class="grid-item number" value="3">3</div>
+    <div class="grid-item operation" id="subtract">–</div>
+    <div class="grid-item" id="comma">,</div>
+    <div class="grid-item number" value="0">0</div>
+    <div class="grid-item" id="equals">=</div>
+    <div class="grid-item operation" id="sum">+</div>
+  </div>
+  <input type="reset" id="reset" onclick="window.location.reload();">
   <!-- SCRIPTS -->
+  <script>console.log("Let's calculate! 🎉");</script>
   <script src="./js/app.js"></script>
 </body>
 </html>
