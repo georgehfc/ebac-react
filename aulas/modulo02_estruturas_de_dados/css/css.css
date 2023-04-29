@@ -66,6 +66,10 @@ input {
   color: white;
 }
 
+.number {
+  font-weight: bold;
+}
+
 #equal:hover {
   background-color: greenyellow;
 }
