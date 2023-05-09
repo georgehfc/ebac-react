@@ -63,6 +63,16 @@ funcAsyncPromise(false)
     console.log(error);
   });
 
+// LOOPS
+const numbers = [1,2,3,4,5];
+
+const numberObjects = numbers.map((current, index, array) => {
+  return { number: current };
+});
+
+console.log(numberObjects);
+console.log(numbers);
+
 // POKéMON API
 const loadPokemon = (id, cb) => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
