@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+}
+h1 {
+  font-size: 40px;
+  padding: 16px;
+  letter-spacing: 4px;
+  background-color: rgb(181, 181, 181);
+  color: rgb(56, 56, 56);
+  /* hyphens: auto; */
+}
+form {
+  display: flex;
+
+}
+input {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 16px;
+  cursor: pointer;
+  border: 2px solid grey;
+}
+button {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 16px;
+  cursor: pointer;
+  border: 2px solid orange;
+  color: white;
+  background-color: orangered;
+  flex-grow: 1;
+}
+
+/* BREAKPOINTS */
+@media only screen and (max-width: 678px) {
+  h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  input {
+    font-size: 16px;
+  }
+  button {
+    font-size: 16px;
+  }
+}
