@@ -3,63 +3,67 @@ const form = document.querySelector("form");
 
 const handleSubmit = (onSubmit, onError, self) => {
   const nameInput = self.querySelector("input#username");
-  console.log(nameInput.value.length);
+  const passInput = self.querySelector("input#password");
 
-  if (nameInput.value.length < 5) {
+  if (nameInput.value.length < 5 || passInput.value.length < 6) {
+    nameInput.focus();
     return onError();
   }
 
-  onSubmit();
+  onSubmit(self);
 };
 
 const error = () => {
   console.log("Error!");
 };
-const submit = () => {
+const submit = (self) => {
+  console.log(self);
   console.log("Submited");
+  const signUpBtn = document.getElementById("signup");
+  signUpBtn.style.backgroundColor = "green";
+  signUpBtn.style.border = "none"
 };
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  console.log("Handling Submit:");
   handleSubmit(submit, error, this)
 });
 
 // PROMISES
 const funcPromise = (condition) => {
   return new Promise((resolve, reject) => {
+    console.log('New Promise Returned:');
     if (!condition) {
       return reject();
     }
-
-    console.log('promise');
-
     resolve();
   });
 };
 
 funcPromise(false)
   .then(() => {
-    console.log('ok');
+    console.log('Promise ok');
   })
   .catch(() => {
-    console.log('error');
+    console.log('Promise error');
   });
 
 // ASYNC PROMISE
 const funcAsyncPromise = async(condition) => {
+  console.log('New (Async) Promise Returned:');
   if(!condition) {
     throw new Error('Condition is set to false.');
   }
-
   return true;
 };
 
-funcAsyncPromise(false)
+funcAsyncPromise(true)
   .then(() => {
-    console.log('async ok');
+    console.log('(Async) Promise ok');
   })
   .catch((error) => {
-    console.log('async error');
+    console.log('(Async) Promise error');
     console.log(error);
   });
 
@@ -70,18 +74,5 @@ const numberObjects = numbers.map((current, index, array) => {
   return { number: current };
 });
 
+console.log("Loops: ");
 console.log(numberObjects);
-console.log(numbers);
-
-// POKéMON API
-const loadPokemon = (id, cb) => {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-  .then(res => res.json())
-  .then(data => {
-    cb(data);
-  });
-};
-
-loadPokemon(4, (pokemon) => {
-  console.log(pokemon);
-});

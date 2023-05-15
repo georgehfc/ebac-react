@@ -31,7 +31,7 @@ loop(1);
 
 // Immediate function:
 (() => {
-  console.log('executed.exe');
+  console.log('executed.exe\nIIFE: Immediately Invoked Function Expression');
 
   // Object:
   const qwe = {
@@ -41,7 +41,7 @@ loop(1);
       console.log(this);
     },
     nameArrow: () => {
-      console.log("Arrow functions have no arguments");
+      console.log(arguments); // ReferenceError: arguments is not defined
       console.log(this);
     }
   }
