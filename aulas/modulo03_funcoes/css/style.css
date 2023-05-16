@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 h1 {
   font-size: 40px;
@@ -9,9 +10,11 @@ h1 {
   color: rgb(56, 56, 56);
   /* hyphens: auto; */
 }
+h2 {
+  padding: 16px;
+}
 form {
   display: flex;
-
 }
 input {
   font-size: 24px;
@@ -21,8 +24,16 @@ input {
   cursor: pointer;
   border: 2px solid grey;
 }
+label {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: grey;
+  cursor: pointer;
+}
 button {
   font-size: 24px;
+  font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
   padding: 16px;
@@ -33,8 +44,19 @@ button {
   flex-grow: 1;
 }
 
+.languages, .agreement, select {
+  padding: 16px;
+  border: 2px solid grey;
+  text-align: center;
+}
+
+select {
+  font-size: 24px;
+  color: grey;
+}
+
 /* BREAKPOINTS */
-@media only screen and (max-width: 678px) {
+@media only screen and (max-width: 1536px) {
   h1 {
     font-size: 20px;
     letter-spacing: 1px;
@@ -44,11 +66,5 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-  input {
-    font-size: 16px;
-  }
-  button {
-    font-size: 16px;
   }
 }

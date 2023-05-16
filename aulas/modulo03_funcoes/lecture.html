@@ -5,16 +5,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Functions</title>
+  <title>Exercício - Módulo 3</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Welcome to Functions</h1>
-  <form>
-    <input type="text" id="username" placeholder="Enter your username">
-    <input type="password" id="password" placeholder="Enter your password">
-    <button id="signup" value="Sign up">Sign Up</button>
+  <h1>Questions</h1>
+  <form action="" method="">
+    <div class="languages">
+      <label>What do you prefer?</label><br>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+    </div>
+
+    <select name="city" id="city" placeholder="AA">
+      <option value="" disabled selected>Select a city</option>
+      <option value="the">Teresina</option>
+      <option value="ssa">Salvador</option>
+      <option value="sp">São Paulo</option>
+      <option value="rj">Rio de Janeiro</option>
+      <option value="lx">Lisboa</option>
+      <option value="opo">Porto</option>
+      <option value="coi">Coimbra</option>
+      <option value="pcv">Praia</option>
+    </select>
+
+    <input type="text" id="username" placeholder="Enter your username" required>
+    <input type="password" id="password" placeholder="Enter your password" required>
+
+    <div class="agreement">
+      <label for="agree">Do you agree?</label><br>
+      <input type="checkbox" id="agree" name="agree">
+      <label for="agree">Yes, I do</label>
+    </div>
+
+    <button label="signup" id="signup" value="Sign up" type="submit">Sign Up</button>
   </form>
+
+  <div class="content">
+    <h2>Answers</h2>
+  </div>
   <!-- SCRIPTS -->
   <!-- <script src="./src/lecture.js"></script> -->
   <script src="./src/index.js"></script>

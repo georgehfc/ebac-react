@@ -16,12 +16,11 @@ const handleSubmit = (onSubmit, onError, self) => {
 const error = () => {
   console.log("Error!");
 };
+
 const submit = (self) => {
-  console.log(self);
+  self.querySelector("button#signup").style.backgroundColor = "green";
+  self.querySelector("button#signup").style.border = "none";
   console.log("Submited");
-  const signUpBtn = document.getElementById("signup");
-  signUpBtn.style.backgroundColor = "green";
-  signUpBtn.style.border = "none"
 };
 
 form.addEventListener("submit", function (event) {
@@ -33,7 +32,7 @@ form.addEventListener("submit", function (event) {
 // PROMISES
 const funcPromise = (condition) => {
   return new Promise((resolve, reject) => {
-    console.log('New Promise Returned:');
+    // console.log('New Promise Returned:');
     if (!condition) {
       return reject();
     }
@@ -43,15 +42,15 @@ const funcPromise = (condition) => {
 
 funcPromise(false)
   .then(() => {
-    console.log('Promise ok');
+    // console.log('Promise ok');
   })
   .catch(() => {
-    console.log('Promise error');
+    // console.log('Promise error');
   });
 
 // ASYNC PROMISE
-const funcAsyncPromise = async(condition) => {
-  console.log('New (Async) Promise Returned:');
+const funcAsyncPromise = async (condition) => {
+  // console.log('New (Async) Promise Returned:');
   if(!condition) {
     throw new Error('Condition is set to false.');
   }
@@ -60,19 +59,22 @@ const funcAsyncPromise = async(condition) => {
 
 funcAsyncPromise(true)
   .then(() => {
-    console.log('(Async) Promise ok');
+    // console.log('(Async) Promise ok');
   })
   .catch((error) => {
-    console.log('(Async) Promise error');
-    console.log(error);
+    // console.log('(Async) Promise error');
+    // console.log(error);
   });
 
 // LOOPS
 const numbers = [1,2,3,4,5];
 
 const numberObjects = numbers.map((current, index, array) => {
-  return { number: current };
+  return {
+    number: current,
+    index: index,
+    array: array };
 });
 
-console.log("Loops: ");
-console.log(numberObjects);
+// console.log("Loops: ");
+// console.log(numberObjects);
