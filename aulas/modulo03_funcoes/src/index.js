@@ -1,26 +1,42 @@
-// CALLBACKS
 const form = document.querySelector("form");
+const selectedCity = document.querySelector("select#city");
+const nameInput = document.querySelector("input#username");
+const passInput = document.querySelector("input#password");
+const signupBtn = document.querySelector("button#signup");
+const answers = document.querySelector(".answers");
 
+// CALLBACKS
 const handleSubmit = (onSubmit, onError, self) => {
-  const nameInput = self.querySelector("input#username");
-  const passInput = self.querySelector("input#password");
-
   if (nameInput.value.length < 5 || passInput.value.length < 6) {
     nameInput.focus();
     return onError();
   }
 
-  onSubmit(self);
+  onSubmit();
 };
 
 const error = () => {
   console.log("Error!");
 };
 
-const submit = (self) => {
-  self.querySelector("button#signup").style.backgroundColor = "green";
-  self.querySelector("button#signup").style.border = "none";
+const submit = () => {
+  signupBtn.style.backgroundColor = "green";
+  signupBtn.style.border = "none";
   console.log("Submited");
+  signupBtn.innerHTML = "<div class='loader'></div>";
+  setTimeout(() => {
+    signupBtn.innerHTML = "Add another";
+
+    let table = document.querySelector('table');
+    let row = table.insertRow();
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+
+    cell1.innerHTML = `${nameInput.value}`
+    cell2.innerHTML = `${document.querySelector('input[name=fav_language]:checked').value}`;
+    cell3.innerHTML = `${selectedCity.value}`;
+  }, 1000);
 };
 
 form.addEventListener("submit", function (event) {

@@ -17,18 +17,20 @@
       <label for="html">HTML</label><br>
       <input type="radio" id="css" name="fav_language" value="CSS">
       <label for="css">CSS</label><br>
+      <input type="radio" id="js" name="fav_language" value="JS">
+      <label for="js">JS</label><br>
     </div>
 
-    <select name="city" id="city" placeholder="AA">
+    <select name="city" id="city">
       <option value="" disabled selected>Select a city</option>
-      <option value="the">Teresina</option>
-      <option value="ssa">Salvador</option>
-      <option value="sp">São Paulo</option>
-      <option value="rj">Rio de Janeiro</option>
-      <option value="lx">Lisboa</option>
-      <option value="opo">Porto</option>
-      <option value="coi">Coimbra</option>
-      <option value="pcv">Praia</option>
+      <option value="Teresina">Teresina</option>
+      <option value="Salvador">Salvador</option>
+      <option value="São Paulo">São Paulo</option>
+      <option value="Rio de Janeiro">Rio de Janeiro</option>
+      <option value="Lisboa">Lisboa</option>
+      <option value="Porto">Porto</option>
+      <option value="Coimbra">Coimbra</option>
+      <option value="Praia">Praia</option>
     </select>
 
     <input type="text" id="username" placeholder="Enter your username" required>
@@ -40,11 +42,18 @@
       <label for="agree">Yes, I do</label>
     </div>
 
-    <button label="signup" id="signup" value="Sign up" type="submit">Sign Up</button>
+    <button label="signup" id="signup" value="Sign up" type="submit">Add to Table</button>
   </form>
 
-  <div class="content">
+  <div class="answers">
     <h2>Answers</h2>
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Preferred Language</th>
+        <th>City</th>
+      </tr>
+    </table>
   </div>
   <!-- SCRIPTS -->
   <!-- <script src="./src/lecture.js"></script> -->
