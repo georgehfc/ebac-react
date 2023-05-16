@@ -7,7 +7,7 @@ const answers = document.querySelector(".answers");
 
 // CALLBACKS
 const handleSubmit = (onSubmit, onError, self) => {
-  if (nameInput.value.length < 5 || passInput.value.length < 6) {
+  if (passInput.value.length < 6) {
     nameInput.focus();
     return onError();
   }
@@ -16,11 +16,11 @@ const handleSubmit = (onSubmit, onError, self) => {
 };
 
 const error = () => {
-  console.log("Error!");
+  alert("Passwords must contain at least 6 characters!");
 };
 
 const submit = () => {
-  signupBtn.style.backgroundColor = "green";
+  signupBtn.style.backgroundColor = "#04AA6D";
   signupBtn.style.border = "none";
   console.log("Submited");
   signupBtn.innerHTML = "<div class='loader'></div>";
@@ -33,7 +33,10 @@ const submit = () => {
     let cell2 = row.insertCell(1);
     let cell3 = row.insertCell(2);
 
-    cell1.innerHTML = `${nameInput.value}`
+    cell1.innerHTML = `${nameInput.value}`;
+    if (!document.querySelector('.agreement input').checked) {
+      cell1.innerHTML += ' ☠️';
+    }
     cell2.innerHTML = `${document.querySelector('input[name=fav_language]:checked').value}`;
     cell3.innerHTML = `${selectedCity.value}`;
   }, 1000);

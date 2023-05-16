@@ -75,6 +75,29 @@ select {
   }
 }
 
+/* TABLE */
+#answers {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#answers td, #customers th {
+  border: 1px solid bisque;
+  padding: 8px;
+}
+
+#answers tr:nth-child(even){background-color: #f2f2f2;}
+
+#answers tr:hover {background-color: bisque;}
+
+#answers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
 /* BREAKPOINTS */
 @media only screen and (max-width: 1536px) {
   h1 {
